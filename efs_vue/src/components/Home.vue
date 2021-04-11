@@ -100,6 +100,11 @@
       viewCustomers() {
         router.push('/customer-list');
       },
+      
+      viewInvestments() {
+        router.push('/investment-list');
+      },
+
       getUser() {
         if (localStorage.getItem("isAuthenticates")
           && JSON.parse(localStorage.getItem("isAuthenticates")) === true) {
