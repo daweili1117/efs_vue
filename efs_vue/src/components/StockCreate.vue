@@ -40,35 +40,30 @@
                     ></v-select>
 
                     <v-text-field
-                    v-model="stock.category"
+                    v-model="stock.symbol"
                     label="Symbol"
                     required
                     />
                     <v-text-field
-                    v-model="stock.description"
+                    v-model="stock.name"
                     label="Name"
                     required
                     />
                     <v-text-field
-                    v-model="stock.acquired_value"
+                    v-model="stock.shares"
                     label="Shares"
                     required
                     type="number"
                     />
                     <v-text-field
-                    v-model="stock.recent_value"
+                    v-model="stock.purchase_price"
                     label="Purchase Price"
                     required
                     type="number"
+
                     />
-                    <v-text-field
-                    v-model="stock.acquired_date"
-                    label="Purchase Date"
-                    required
-                    type="date"
-                    />
-                 
             
+
                 </v-container>
                 <v-btn v-if="!isUpdate" class="blue white--text" @click="createStock">Save</v-btn>
                 <v-btn v-if="isUpdate" class="blue white--text" @click="updateStock">Update</v-btn>
@@ -96,8 +91,8 @@
       return {
         customers: [],
         showError: false,
-        Stock: {},
-        pageTitle: "Add New Stock",
+        stock: {},
+        pageTitle: "Add New Stocks",
         isUpdate: false,
         showMsg: '',
       };
