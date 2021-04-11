@@ -76,6 +76,21 @@
                     </v-card-actions>
                   </v-card> 
                 </v-col>
+                <v-col>
+                  <v-card>
+                    <v-img
+                      :src="require('@/assets/images/fund.jpeg')"  height="200px" width="400px"  >
+                    </v-img>
+                    <v-card-text>
+                      <div class="blue--text text-h6">
+                        Funds
+                      </div>  
+                    </v-card-text>
+                    <v-card-actions>
+                      <v-btn flat color="orange" @click="viewFunds">View Details</v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-col>
               </v-row>
             </v-container>
           </v-card>
@@ -106,6 +121,9 @@
       },
       viewStocks() {
         router.push('/stock-list');
+      },
+      viewFunds() {
+        router.push('/fund-list');
       },
 
       getUser() {
